@@ -64,16 +64,16 @@ public class DefaultEventProcessor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DefaultEventProcessor.class);
 
-    private final MetadataService metadataService;
-    private final ExecutionService executionService;
-    private final ActionProcessor actionProcessor;
+    protected final MetadataService metadataService;
+    protected final ExecutionService executionService;
+    protected final ActionProcessor actionProcessor;
 
-    private final ExecutorService eventActionExecutorService;
-    private final ObjectMapper objectMapper;
-    private final JsonUtils jsonUtils;
-    private final boolean isEventMessageIndexingEnabled;
-    private final Map<String, Evaluator> evaluators;
-    private final RetryTemplate retryTemplate;
+    protected final ExecutorService eventActionExecutorService;
+    protected final ObjectMapper objectMapper;
+    protected final JsonUtils jsonUtils;
+    protected final boolean isEventMessageIndexingEnabled;
+    protected final Map<String, Evaluator> evaluators;
+    protected final RetryTemplate retryTemplate;
 
     public DefaultEventProcessor(
             ExecutionService executionService,
